@@ -1,0 +1,81 @@
+#header{
+    background-color: green;
+}
+
+
+nav{
+    background-color: yellow;
+    text-align: center;
+}
+
+.article{
+    background-color: red;
+    text-align: center;
+}
+
+.main-container
+{
+    display: flex;
+}
+
+.main-container article
+{
+    width: 67%;
+}
+
+
+.main-container aside
+{
+    width: 33%;
+}
+
+section{
+    background-color: blue;
+    text-align: center;
+}
+.aside{
+    background-color:coral;
+    text-align: center;
+}
+
+footer{
+    background-color: purple;
+    text-align: center;
+}
+
+nav ul, nav li{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+     list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    width: 33%;
+}
+
+html, body{
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: inline-block;
+    width: 100%;
+    color: blueviolet;
+    background-color: firebrick;
+}
+
+a:hover{
+    color: green;
+    background-color: aqua;
+}
