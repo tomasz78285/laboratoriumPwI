@@ -7,30 +7,24 @@
 <body>
    
 <?php
-    $servername = "localhost";
-    $username = "user";
-    $password = "password";
-    $dbname = "db";
+    $db = new PDO('mysql:host=localhost;dbname=uczelnia', 'username', 'password');
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT id, marka, model, pojemnosc FROM samochody WHERE id = 1 OR WHERE id = 3";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_assoc($result)) {
-            echo "id: " . $row["id"]. "  marka: " . $row["marka"]. " model" . $row["model"]. " pojemnosc" . $row["pojemnosc"];
-        }
-    } else {
-        echo "0 results";
-    }
-
-    mysqli_close($conn);
+   try
+{
+    $db = new PDO('mysql:host=localhost;dbname=nazwa_bazy', 'nazwa_uzytkownika', 'haslo');
+}
+catch (PDOException $e)
+{
+    print "Błąd połączenia z bazą!: " . $e->getMessage() . "<br/>";
+    die();
+}
    ?>
-
+$statement = $db->query('SELECT marka, model, pojemnosc FROM samochody WHERE id = 1 AND WHERE id = 3');
+foreach($statement as $wiersz)
+{
+    echo($wiersz['marka']." ".$wiersz['model']." ".$wiersz['pojemnosc']."<br />");
+}
+$statement->closeCursor();
 
 
    
