@@ -15,7 +15,7 @@
 
     $dbh = new PDO('mysql:host=' . $mysql_host . ';dbname=' . $database , $username, $password );
 
-    $select = $dbh->exec("SELECT * FROM studenci");
+    $select = $dbh->query("SELECT * FROM studenci");
 
     
    ?>
