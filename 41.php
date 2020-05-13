@@ -15,7 +15,7 @@ $database = 'uczelnia';
 
 $dbh = new PDO('mysql:host=' . $mysql_host . ';dbname=' . $database , $username, $password );
 
-$update = $dbh->exec("UPDATE studenci SET nazwisko = 'Malinowski' WHERE id = 3");
+$update = $dbh->query("UPDATE studenci SET nazwisko = 'Malinowski' WHERE id = 3");
 
 
    ?>
