@@ -15,7 +15,7 @@
 
         $dbh = new PDO('mysql:host=' . $mysql_host . ';dbname=' . $database , $username, $password );
 
-        $delete = $dbh->exec("DELETE FROM studenci WHERE id = 2");
+        $delete = $dbh->query("DELETE FROM studenci WHERE id = 2");
 
         
    ?>
