@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function() {
+                 $("#pokaz").click(function () { 
+                     $('#komunikat').slideToggle('normal');
+                 });
+            });
+       </script>
+    
+    </head>
+    <body>
+    <a href="#" id="schowaj">Schowaj</a> 
+    <a href="#" id="pokaz">Pokaz</a>
+    <div id="komunikat" style="display: none">To jest tekst!</div>
+    </body>
+</html>
